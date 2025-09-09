@@ -1,0 +1,130 @@
+/* Background Color */
+body {
+    background-color: #FFF5E1;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Banner */
+.banner {
+    background-color: #FFC0CB;
+}
+
+.bannerLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .iconTitle {
+        gap: 10px;
+        transform: scale(0.9);
+    }
+    .iconTitle img {
+        width: auto;
+        height: 40px;
+    }
+    .iconTitle h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+#logoMain {
+    height: 100px;
+    border: 2px solid #5D4037;
+    border-radius: 50%;
+}
+
+.divNav {
+    background-color: #5D4037;
+    border-radius: 30px;
+}
+
+.navbar a:hover {
+    color: #FFC0CB !important;
+}
+
+
+/* Texto */
+h1 {
+    white-space: nowrap;
+}
+
+.tPrin {
+    color: #5D4037;
+    font-family: 'Lato';
+}
+
+.tSec {
+    color: #B0BEC5;
+    font-family: 'Pacifico';
+}
+
+/* Main */
+main {
+    padding: 5dvh;
+    background-image: url(../imagenes/bg/bg-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cuadroVisMis {
+    background-color: #FFC0CB;
+    border: 2px solid #5D4037;
+    border-radius: 30px;
+}
+/* Imagenes Banner Pasteles en el Main */
+#bannerHori {
+    display: none;
+    height: 150px;
+    border: 2px solid #5D4037;
+}
+#bannerVert {
+    height: 500px;
+    border: 2px solid #5D4037;
+}
+@media (max-width: 991.98px) {
+    #bannerVert {
+        display: none;
+    }
+    #bannerHori {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Pie de pagina */
+footer {
+    background-color: #FFC0CB;
+    display: flex;
+    align-items: center;
+}
+
+.rrss {
+    display: inline;
+}
+
+#logoRRSS {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Botones */
+.btn-dark {
+    background-color: #5D4037;
+    color: #B0BEC5;
+}
+
+.btnBanner {
+    display: flex;
+    justify-content: flex-end;
+}
