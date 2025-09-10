@@ -23,8 +23,17 @@
     gap: 20px;
     
 }
+.catalogo h1 {
+    text-align: center;
+}
 .catalogo h2 {
     text-align: center;
+}
+.producto h5 {
+    text-align: end;
+}
+.producto h2 {
+    text-align: end;
 }
 
 .producto {
@@ -63,4 +72,10 @@
 .producto p {
     margin: 0 auto;
     margin-bottom: auto;
+}
+
+#imagenGrande {
+    margin: 0 auto;    
+    height: 300px;
+    border-radius: 10px
 }

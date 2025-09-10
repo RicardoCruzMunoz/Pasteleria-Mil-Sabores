@@ -1,12 +1,3 @@
-const productos = [
-    ["TC001", "Tortas Cuadradas", "Torta Cuadrada de Chocolate", "$45.000", "imagenes/pasteles/cuadrada_chocolate.jpg"],
-    ["TC002", "Tortas Cuadradas", "Torta Cuadrada de Frutas", "$50.000", "imagenes/pasteles/cuadrada_frutas.jpg"],
-    ["TT001", "Tortas Circulares", "Torta Circular de Vainilla", "$40.000", "imagenes/pasteles/circular_vainilla.png"],
-    ["TT002", "Tortas Circulares", "Torta Circular de Manjar", "$42.000", "imagenes/pasteles/circular_manjar.jpg"],
-    ["PI001", "Postres Individuales", "Mousse de Chocolate", "$5.000", "imagenes/pasteles/mousse_chocolate.jpg"],
-    ["PI002", "Postres Individuales", "Torta sin Azúcar de Naranja", "$5.500", "imagenes/pasteles/naranja_sin_azucar.jpg"],
-];
-
 
 const catalogo = document.getElementById('tortas');
 
@@ -28,5 +19,11 @@ productos.forEach(p => {
         <button type="submit" class="btnAcc btn btn-dark">Ver Detalle</button>
     `;
 
+    const botonDetalle = productoDiv.querySelector('button');
+    botonDetalle.addEventListener('click', () => {
+        window.location.href = `detalleProducto.html?id=${identificador}`;
+    });
+
     catalogo.appendChild(productoDiv);
 });
+
