@@ -1,0 +1,66 @@
+.filtroProd {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#categorias {
+    width: 300px;
+}
+
+@media (min-width: 769px){
+    .cajaCatalogo {
+        width: 1300px;
+    }
+}
+.cajaCatalogo {
+    background-color: #FFC0CB;
+    border: 2px solid #5D4037;
+    border-radius: 30px;
+}
+.catalogo .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.catalogo h2 {
+    text-align: center;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.producto img {
+    margin: 0 auto;    
+    height: 150px;
+    border-radius: 10px;
+}
+
+.producto button {
+  background: #5D4037;
+  color: #B0BEC5;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.producto button:hover {
+  background: #FFC0CB;
+  color: #5D4037;
+}
+
+.producto p {
+    margin: 0 auto;
+    margin-bottom: auto;
+}

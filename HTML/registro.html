@@ -66,7 +66,7 @@
                         <form id="formRegistro" novalidate>
                             <div class="mb-3">
                                 <label class="form-label" for="nombre"><h5 class="tPrin">Nombre completo</h5></label>
-                                <input id="nombre" class="form-control" type="text" maxlength="80" placeholder="Ejemplo: Nicolas Perez">
+                                <input id="nombre" class="form-control" type="text" maxlength="80" placeholder="Ejemplo: Nicolas Perez" required>
                                 <div class="invalid-feedback"><h6 class="tPrin">Sólo letras y espacios, máximo 80 caracteres.</h6></div>
                             </div>
                             <div class="mb-3">
@@ -75,12 +75,12 @@
                                 <div class="invalid-feedback"><h6 class="tPrin">Debe ser un correo válido @duoc.cl y no estar registrado.</h6></div>
                             </div>
                             <div class="row g-3">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-12">
                                     <label class="form-label" for="password"><h5 class="tPrin">Contraseña</h5></label>
                                     <input id="password" class="form-control" type="password" required>
                                     <div class="invalid-feedback"><h6 class="tPrin">La contraseña no cumple los requisitos.</h6></div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-12">
                                     <label class="form-label" for="password2"><h5 class="tPrin">Repetir contraseña</h5></label>
                                     <input id="password2" class="form-control" type="password" required>
                                     <div class="invalid-feedback"><h6 class="tPrin">Las contraseñas no coinciden.</h6></div>
@@ -88,21 +88,18 @@
                                 <div class="form-text"><h6 class="tPrin">Mín. 8, con mayúscula, minúscula, número y símbolo.</h6></div>
                             </div>
                             <div class="row my-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="telefono"><h5 class="tPrin">Teléfono (opcional)</h5></label>
-                                    <input id="telefono" class="form-control" type="tel" placeholder="+56 9 1234 5678">
-                                    <div class="invalid-feedback"><h6 class="tPrin">Ingresa un teléfono válido</h6></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <label class="form-label" for="telefono"><h5 class="tPrin">Código (opcional)</h5></label>
+                                    <input id="telefono" class="form-control" type="tel" placeholder="Ingrese código">
+                                    <div class="invalid-feedback"><h6 class="tPrin">Código no valido</h6></div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="comuna"><h5 class="tPrin">Comuna</h5></label>
-                                    <select id="comuna" class="form-select" required>
-                                        <option value="">Selecciona tu comuna…</option>
-                                    </select>
-                                    <div class="invalid-feedback">Selecciona una comuna.</div>
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="Fecha nacimiento" class="form-label"><h5 class="tPrin">Fecha nacimiento</h5></label>
+                                    <input type="date" class="form-control" required>
                                 </div>
                                 <div class="container d-flex justify-content-center gap-2 mt-4">
-                                    <button type="submit" class="btnAcc btn btn-dark">Crear cuenta</button>
                                     <a href="acceso.html" class="btnAcc btn btn-dark">Ir al login</a>
+                                    <button type="submit" class="btnAcc btn btn-dark">Crear cuenta</button>
                                 </div>
                             </div>
                         </form>
