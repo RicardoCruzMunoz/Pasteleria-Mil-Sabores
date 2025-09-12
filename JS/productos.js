@@ -1,4 +1,6 @@
 const productos = [
+    // [id, categoria, nombre, precio, imagen, descripcion]
+    // Ejemplo:
     ["TC001", "Tortas Cuadradas", "Torta Cuadrada de Chocolate", "$45.000", "imagenes/pasteles/cuadrada_chocolate.jpg", "Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales."],
     ["TC002", "Tortas Cuadradas", "Torta Cuadrada de Frutas", "$50.000", "imagenes/pasteles/cuadrada_frutas.jpg", "Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones"],
     ["TT001", "Tortas Circulares", "Torta Circular de Vainilla", "$40.000", "imagenes/pasteles/circular_vainilla.png", "Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión."],
