@@ -20,9 +20,18 @@ if (detalleDiv) {
                     <h5 class="tPrin"><strong>Categoría:</strong> ${producto[1]}</h5>
                     <h5 class="tPrin"><strong>Precio:</strong> ${producto[3]}</h5>
                     <h5 class="tPrin"><strong>Descripcion:</strong>${producto[5]}</h5>
+                    <button id="btnAgregarCarrito" class="btn btn-success mt-3">Agregar al carrito</button>
                 </div>
             </div>
             `;
+            // Solo agrega al carrito cuando el usuario hace clic
+            const btnAgregar = document.getElementById('btnAgregarCarrito');
+            if (btnAgregar) {
+                btnAgregar.addEventListener('click', function() {
+                    window.carrito.agregarProducto(producto[0]);
+                    alert('Producto agregado al carrito');
+                });
+            }
         } else {
             detalleDiv.innerHTML = '<p>Producto no encontrado</p>';
         }

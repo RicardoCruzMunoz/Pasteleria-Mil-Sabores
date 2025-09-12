@@ -43,6 +43,10 @@ body {
     border-radius: 50%;
 }
 
+#carritoLogo{
+    height: 50px;
+}
+
 .divNav {
     background-color: #5D4037;
     border-radius: 30px;
