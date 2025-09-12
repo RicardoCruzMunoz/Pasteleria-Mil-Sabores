@@ -1,81 +1,60 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pasteleria Mil Sabores</title>
+    <title>Catálogo - Pastelería Mil Sabores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../assets/catalogo.css">
     <link rel="icon" href="../imagenes/icon.png" type="image/png">
-    <!-- Fuentes -->
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
-
 </head>
 
 <body>
     <header>
         <div class="banner p-1 p-lg-2 px-md-3">
             <div class="bannerLogin pt-lg-2 ps-lg-2">
-                <div class="iconTitle mb-col-2">
+                <div class="iconTitle mb-2">
                     <a href="index.html"><img id="logoMain" src="../imagenes/logo.png" alt="logo"></a>
-                    <h1 class="tPrinTitle">
-                        <span class="bloqueSolo">Pastelería Mil Sabores</span>
-                    </h1>
-                </div>
-                <!-- Intento de alinear -->
-                <div class="divNav m-2 p-lg-2 p-md-1 col-6">
-                    <nav class="navbar navbar-expand-lg pt-1">
-                        <div class="container-fluid">
-                            <a class="navbar-brand tSec" href="index.html">Inicio</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="contacto.html">Contacto</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="comunidad.html">Comunidad</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="nosotros.html">Nosotros</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="container btnBanner">
-                    <div id="loginContainer">
-                        <a href="acceso.html"><button class="btn btn-dark">Login</button></a>
-                    </div>
-
-                    <div id="userContainer" class="dropdown d-none">
-                        <button class="btn btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-list"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="perfilUsuario.html">Perfil</a></li>
-                            <hr>
-                            <li><a class="dropdown-item" href="#" id="logoutBtn">Cerrar sesión</a></li>
-                        </ul>
-                    </div>
+                    <h1 class="tPrin">Pastelería Mil Sabores</h1>
                 </div>
             </div>
+            <div class="divNav m-2 p-lg-2 p-md-1">
+                <nav class="navbar navbar-expand-lg pt-1">
+                    <div class="container-fluid">
+                        <a class="navbar-brand tSec" href="index.html">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="comunidad.html">Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="nosotros.html">Nosotros</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../HTML/carrito.html"><img id="carrito" src="../imagenes/carrito-de-compras.png" alt=""></a>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </header>  
+    </header>    
 
     <main>
-        <div class="divNav2 py-2">
+        <div class="divNav py-2">
             <div class="filtroProd mx-5">
                 <input type="text" class="form-control" id="buscar" placeholder="Buscar producto">
                 <select id="categorias" class="form-select">
@@ -95,31 +74,25 @@
             <div class="catalogo">
                 <h2 class="tPrin mb-4">Productos</h2>
                 <div id="tortas" class="row justify-content-center mb-3">
-
                 </div>
             </div>
         </div>
     </main>
     
     <footer class="p-3 ps-lg-5 ps-md-2">
-        <h4 class="tPrin">
-            <span class="bloqueSolo">  Redes Sociales</span>
-        </h4>
-        <span class="bloqueSolo">
+        <h4 class="tPrin">Redes Sociales</h4>
         <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoFb.png" alt="logoFb"></a>
-        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoIg.png" alt="logoFb"></a>
-        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoWsp.png" alt="logoFb"></a>
-        </span>
+        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoIg.png" alt="logoIg"></a>
+        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoWsp.png" alt="logoWsp"></a>
     </footer>
 
-
-
     <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
+    <script src="../JS/detalleProducto.js"></script>
     <script src="../JS/catalogo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="../JS/index_user.js"></script>
 </body>
-
 </html>

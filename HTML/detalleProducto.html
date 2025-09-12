@@ -1,19 +1,16 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pasteleria Mil Sabores</title>
+    <title>Detalle Producto - Pastelería Mil Sabores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../assets/catalogo.css">
     <link rel="icon" href="../imagenes/icon.png" type="image/png">
-    <!-- Fuentes -->
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
-
 </head>
 
 <body>
@@ -26,7 +23,6 @@
                         <span class="bloqueSolo">Pastelería Mil Sabores</span>
                     </h1>
                 </div>
-                <!-- Intento de alinear -->
                 <div class="divNav m-2 p-lg-2 p-md-1 col-6">
                     <nav class="navbar navbar-expand-lg pt-1">
                         <div class="container-fluid">
@@ -38,7 +34,7 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
+                                        <a class="nav-link tSec" href="catalogo.html">Catálogo</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link tSec" href="contacto.html">Contacto</a>
@@ -58,7 +54,6 @@
                     <div id="loginContainer">
                         <a href="acceso.html"><button class="btn btn-dark">Login</button></a>
                     </div>
-
                     <div id="userContainer" class="dropdown d-none">
                         <button class="btn btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-list"></i>
@@ -77,10 +72,25 @@
     <main>
         <div class="cajaCatalogo container mt-3 p-4">
             <div class="catalogo">
-                <h1 class="tPrin mb-4">Detalle </h1>
+                <!-- Botón para regresar al catálogo -->
+                <div class="mb-3">
+                    <a href="catalogo.html" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver al Catálogo
+                    </a>
+                </div>
+                
+                <h1 class="tPrin mb-4">Detalle del Producto</h1>
+                
+                <!-- Contenedor donde se mostrará el detalle del producto -->
                 <div class="producto">
                     <div id="detalleProducto" class="row justify-content-center p-2 mb-3">
-                        
+                        <!-- El contenido se cargará dinámicamente con JavaScript -->
+                        <div class="text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <p class="mt-2">Cargando producto...</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,24 +99,22 @@
     
     <footer class="p-3 ps-lg-5 ps-md-2">
         <h4 class="tPrin">
-            <span class="bloqueSolo">  Redes Sociales</span>
+            <span class="bloqueSolo">Redes Sociales</span>
         </h4>
         <span class="bloqueSolo">
-        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoFb.png" alt="logoFb"></a>
-        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoIg.png" alt="logoFb"></a>
-        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoWsp.png" alt="logoFb"></a>
+            <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoFb.png" alt="logoFb"></a>
+            <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoIg.png" alt="logoIg"></a>
+            <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoWsp.png" alt="logoWsp"></a>
         </span>
     </footer>
 
-
-
-
+    <!-- Scripts en orden correcto -->
     <script src="../JS/productos.js"></script>
+    <script src="../JS/carrito.js"></script>
     <script src="../JS/detalleProducto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="../JS/index_user.js"></script>
 </body>
-
 </html>

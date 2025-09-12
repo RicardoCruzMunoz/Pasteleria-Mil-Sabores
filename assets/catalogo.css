@@ -13,7 +13,7 @@
     }
 }
 .cajaCatalogo {
-    background-color: rgb(255, 192, 203,0.7);
+    background-color: #FFC0CB;
     border: 2px solid #5D4037;
     border-radius: 30px;
 }
@@ -21,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 .catalogo h1 {
     text-align: center;
@@ -52,20 +53,20 @@
 }
 
 .producto button {
-    background: #ffe9bf;
-    color: #5D4037;
-    border: none;
-    padding: 10px;
-    margin: 0 auto;
-    margin-top: auto;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 150px;
+  background: #5D4037;
+  color: #B0BEC5;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
 }
 
 .producto button:hover {
-    background: #FFC0CB;
-    color: #5D4037;
+  background: #FFC0CB;
+  color: #5D4037;
 }
 
 .producto p {
