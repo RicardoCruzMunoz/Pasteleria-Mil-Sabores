@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acceso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/accesos.css">
+    <link rel="icon" href="../imagenes/icon.png" type="image/png">
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
+
+</head>
+
+<body>
+    <header>
+        <div class="banner p-1 p-lg-2 px-md-3">
+            <div class="bannerLogin pt-lg-2 ps-lg-2">
+                <div class="iconTitle mb-2">
+                    <a href="index.html"><img id="logoMain" src="../imagenes/logo.png" alt="logo"></a>
+                    <h1 class="tPrin">Pasteleria Mil Sabores</h1>
+                </div>
+            </div>
+            <div class="divNav m-2 p-lg-2 p-md-1">
+                <nav class="navbar navbar-expand-lg pt-1">
+                    <div class="container-fluid">
+                        <a class="navbar-brand tSec" href="index.html">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="comunidad.html">Comunidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tSec" href="nosotros.html">Nosotros</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div id="cajaAcceso" class="contenido m-5 p-4">
+                <h2 class="tPrin">Acceso</h2>
+                <div class="mx-3">
+                    <div class="col-12 my-4">
+                        <label class="form-label tPrin" for="correo"><h5>Correo</h5></label>
+                        <input type="text" class="form-control" required>
+                        <div class="invalid-feedback"><h6 class="tPrin">Debe ser un correo válido @duoc.cl</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 my-4">
+                        <label class="form-label tPrin" for="password"><h5>Contraseña</h5></label>
+                        <input id="password" class="form-control" type="password" required>
+                        <div class="container d-flex justify-content-center">
+                            <h6 class="tPrin mt-1">¿Olvidó su contraseña? Pulse <a href="#">aquí</a></h6>
+                        </div>    
+                    </div>
+                    <div class="container d-flex justify-content-center mt-4">
+                        <a href="#"><button class="submit btnAcc btn btn-dark">Iniciar Sesion</button></a>
+                    </div>
+                    <div class="container d-flex justify-content-center mt-2">
+                        <h6 class="tPrin">¿No tiene cuenta? <a href="registro.html">Regístrese</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="p-3 ps-lg-5 ps-md-2">
+        <h4 class="tPrin">Redes Sociales</h4>
+        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoFb.png" alt="logoFb"></a>
+        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoIg.png" alt="logoFb"></a>
+        <a href="#"><img id="logoRRSS" src="../imagenes/RRSS/logoWsp.png" alt="logoFb"></a>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

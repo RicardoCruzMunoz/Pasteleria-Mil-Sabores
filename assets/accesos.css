@@ -1,0 +1,18 @@
+#cajaAcceso {
+    background-color: #FFC0CB;
+    border: 2px solid #5D4037;
+    border-radius: 30px;
+    width: 700px;
+}
+.contenedor {
+    display: grid;
+    place-items: center;
+}
+#cajaAcceso h2 {
+    text-align: center;
+}
+
+.container .btnAcc {
+    width: 150px; 
+    text-align: center;
+}
