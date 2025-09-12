@@ -1,0 +1,67 @@
+
+@media (min-width: 769px){
+    .cajaPerfil {
+        width: 800px;
+    }
+}
+.cajaPerfil {
+    background-color: #FFC0CB;
+    border: 2px solid #5D4037;
+    border-radius: 30px;
+}
+.caja .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.caja h1 {
+    text-align: center;
+}
+.caja h2 {
+    text-align: center;
+}
+.perfil h5 {
+    text-align: end;
+}
+.perfil h2 {
+    text-align: end;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.perfil img {
+    margin: 0 auto;    
+    height: 150px;
+    border-radius: 10px;
+}
+
+.perfil button {
+  background: #5D4037;
+  color: #B0BEC5;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.perfil button:hover {
+  background: #FFC0CB;
+  color: #5D4037;
+}
+
+.perfil p {
+    margin: 0 auto;
+    margin-bottom: auto;
+}

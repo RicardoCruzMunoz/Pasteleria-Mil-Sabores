@@ -1,14 +1,16 @@
-// Espera a que la pagina termine de cargar para buscar elementos del DOM, evita errores por elementos no existentes
 document.addEventListener("DOMContentLoaded", () => {
-    // seleccion del formulario y div de alerta
-    const formulario = document.getElementById("formRegistro");
+    const form = document.getElementById("formRegistro");
     const alerta = document.getElementById("regAlert");
 
-    // Tomar el submit del formulario (html)
-    formulario.addEventListener("submit", function (e) {
-        e.preventDefault(); // evita que la pagina se recargue al enviar
+    function showAlert(message, type = "success"){
+        alerta.textContent = message;
+        alerta.className = `alert alert-${type}`;
+        alerta.classList.remove("d-none");
+    }
 
-        // tomamos valores de los input
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
         const nombre = document.getElementById("nombre").value.trim();
         const correo = document.getElementById("correo").value.trim();
         const password = document.getElementById("password").value;
@@ -16,56 +18,68 @@ document.addEventListener("DOMContentLoaded", () => {
         const codigo = document.getElementById("codigo").value.trim();
         const fechaNacimiento = document.getElementById("fechaNacimiento").value;
 
-        // validaciones
+        const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,80}$/; 
+        const regexCorreoGeneral = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+        const regexCorreoDuoc = /@duoc\.cl$/i;
+        const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.#])[A-Za-z\d@$!%*?&.#]{8,}$/;
+        const regexCodigo = /^$|^[0-9]{4,8}$/;
 
-        //validar nombre : solo letras y espacios, 2 a 30 caracteres
-        const validNombre = (nombre) => /^[A-Za-z\s]{2,30}$/.test(nombre);
-        //validar correo : opcional duoc
-        const isDuocMail = (correo) => /^[A-Za-z0-9._-]+@duoc\.cl$/.test(correo);
-        //validar contraseña fuerte: 1 minus, 1 mayus, 1 numero, 1 caracter esp
-        const strongPass = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,100}$/.test(password);
-        //validar codigo (opcional) : FELICES50
-        const validCodigo = (codigo) => codigo === '' || codigo === 'FELICES50';
-        //validar fechaNac
-        const validFecha = (fecha) => /^\d{4}-\d{2}-\d{2}$/.test(fecha);
-
-        const calcularEdad = (fecha) => {
-            const hoy = new Date();
-            const nacimiento = new Date(fecha);
-            let edad = hoy.getFullYear() - nacimiento.getFullYear();
-            const mesDif = hoy.getMonth() - nacimiento.getMonth();
-            const diaDIf = hoy.getDate() - nacimiento.getDate();
-            if (mesDif < 0 || (mesDif === 0 && diaDIf < 0)) edad--;
-                return edad;
+        // Validaciones
+        if (!regexNombre.test(nombre)) {
+            showAlert("El nombre solo puede contener letras y espacios (máx. 80).", "danger");
+            return;
         }
 
-        const cumpleaños = (fecha) => {
-            const hoy = new Date();
-            const nacimiento = new Data(fecha);
-            return hoy.getDate() === nacimiento.getDate() && hoy.getMonth() === nacimiento.getMonth();
+        // Correo opcional: solo validamos si NO está vacío
+        if (correo && !regexCorreoGeneral.test(correo)) {
+            showAlert("Debe ser un correo electrónico válido.", "danger");
+            return;
         }
 
+        if (!regexPassword.test(password)) {
+            showAlert("La contraseña debe tener mínimo 8 caracteres, mayúscula, minúscula, número y símbolo.", "danger");
+            return;
+        }
+        if (password !== password2) {
+            showAlert("Las contraseñas no coinciden.", "danger");
+            return;
+        }
+        if (!regexCodigo.test(codigo)) {
+            showAlert("El código debe tener entre 4 y 8 dígitos o estar vacío.", "danger");
+            return;
+        }
+        if (!fechaNacimiento) {
+            showAlert("Debes ingresar tu fecha de nacimiento.", "danger");
+            return;
+        }
 
-        // mostrar errores
-        if (errores.length > 0) {
-            alerta.innerHTML = errores.join("<br>");
-            alerta.style.display = "block";
-            alerta.className = "alert alert-danger";
+        // Revisar duplicado
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        if (correo && usuarios.some(u => u.correo === correo)) {
+            showAlert("Este correo ya está registrado.", "danger");
+            return;
+        }
+
+        const esDuoc = correo ? regexCorreoDuoc.test(correo) : false;
+
+        const nuevoUsuario = {
+            nombre,
+            correo,
+            password,
+            codigo,
+            fechaNacimiento,
+            beneficioDuoc: esDuoc
+        };
+
+        usuarios.push(nuevoUsuario);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        if (esDuoc) {
+            showAlert("Cuenta creada con éxito 🎉 ¡Obtendrás torta gratis en tu cumpleaños por ser de Duoc!", "success");
         } else {
-            alerta.style.display = "block";
-            alerta.className = "alert alert-success";
-
-            let mensaje = "Formulario válido!";
-
-            const edad = calcularEdad(fechaNacimiento);
-            if (edad >= 50) mensaje += "<br>¡Felicidades! Tienes 50% de descuento en todos los productos.";
-
-            if ((isDuocMail(correo) || isEstudianteMail(correo)) && esCumpleaños(fechaNacimiento)) {
-                mensaje += "<br>¡Torta gratis por tu cumpleaños!";
-            }
-
-            alerta.innerHTML = mensaje;
+            showAlert("Cuenta creada con éxito.", "success");
         }
 
+        form.reset();
     });
 });

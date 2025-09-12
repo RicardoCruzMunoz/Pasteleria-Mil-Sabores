@@ -16,3 +16,17 @@
     width: 150px; 
     text-align: center;
 }
+
+.alert-danger {
+    background-color: #5D4037 !important;
+    color: white !important;
+    border-radius: 30px;
+}
+.alert-success {
+    background-color: #5D4037 !important;
+    color: white !important;
+    border-radius: 30px;
+}
+.alert {
+    text-align: center !important;
+}
