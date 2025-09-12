@@ -27,33 +27,52 @@
                     </h1>
                 </div>
                 <!-- Intento de alinear -->
-                <div class="divNav m-2 p-lg-2 p-md-1 col-10">
-                    <nav class="navbar navbar-expand-lg pt-1">
-                        <div class="container-fluid">
-                            <a class="navbar-brand tSec" href="index.html">Inicio</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="contacto.html">Contacto</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="comunidad.html">Comunidad</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link tSec" href="nosotros.html">Nosotros</a>
-                                    </li>
-                                </ul>
+                <div class="alinearNav col-9">
+                    <div class="divNav m-2 p-lg-2 p-md-1 col-6">
+                        <nav class="navbar navbar-expand-lg pt-1">
+                            <div class="container-fluid">
+                                <a class="navbar-brand tSec" href="index.html">Inicio</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link tSec" href="catalogo.html">Catalogo</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tSec" href="contacto.html">Contacto</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tSec" href="comunidad.html">Comunidad</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tSec" href="nosotros.html">Nosotros</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+                        </nav>
+                    </div>
+                    <div class="container btnBanner">
+                        <div id="loginContainer">
+                            <a href="acceso.html"><button class="btn btn-dark">Login</button></a>
                         </div>
-                    </nav>
+    
+                        <div id="userContainer" class="dropdown d-none">
+                            <button class="btn btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-list"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="perfilUsuario.html">Perfil</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#" id="logoutBtn">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
     </header>
 
@@ -63,25 +82,25 @@
             <p  class="tPrin">Bienvenidos a la comunidad, un espacio para compartir noticias, recetas, consejos y experiencias que nos mantienen conectados e inspirados.</p>
         </div>
         
-        <div class="container p-4 contenedorComunidad">
+        <div class="container p-4 contenedorComunidad ">
             <div id="tCont" class="cuadroComunidad divSec p-3 container mb-4">
                 <h3 class="tPrin">Noticias</h3>
                 <div class="tPrin p-3">Sección con novedades, consejos y curiosidades del mundo culinario, ideal para quienes disfrutan aprender y compartir sobre gastronomía.</div>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">Un hombre crea un nuevo tipo de pasta</div>
                     <div class="tSec">“Está diseñada para ser perfecta”</div>
                     <img src="../imagenes/comunidad/Noticia Pasta.avif" alt="Vista previa" width="200">
                     <a href="https://www.infobae.com/espana/2025/08/20/un-hombre-crea-un-nuevo-tipo-de-pasta-esta-disenada-para-ser-perfecta/"><button class="btn btn-dark">Ver noticia</button></a>
                 </div>
                 <br>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">Kyochi abre su local más grande en Chile</div>
                     <div class="tSec">La cadena de comida coreana, inauguró su local más grande en Chile: ¿Dónde queda?</div>
                     <img src="../imagenes/comunidad/Noticia Koyshi.avif" alt="Vista previa" width="300">
                     <a href="https://www.latercera.com/tendencias/noticia/koychi-la-cadena-de-comida-coreana-inauguro-su-local-mas-grande-en-chile-donde-queda/"><button class="btn btn-dark">Ver noticia</button></a>
                 </div>
                 <br>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">Proximamente</div>
                     <img src="../imagenes/comunidad/17659499.gif" alt="Vista Previa" width="255">
                 </div>
@@ -92,21 +111,21 @@
                 <div class="tPrin p-3">
                         Sección con recetas variadas, consejos y curiosidades culinarias, pensada para inspirar y animarte a probar nuevas preparaciones.
                 </div>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">"Pie de limón"</div>
                     <div class="tSec">Bajo costo, bien valorado y listo en aproximadamente 35 minutos</div>
                     <img src="../imagenes/comunidad/Receta Pie de limon.webp" alt="Vista Previa" width="360">
                     <a href="https://www.recetasnestle.cl/recetas/pie-de-limon"><button class="btn btn-dark">Ver Receta</button></a>
                 </div>
                 <br>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">"Croquembouche"</div>
                     <div class="tSec">Torre formada por profiteroles rellenos de crema y bañados en caramelo</div>
                     <img src="../imagenes/comunidad/Receta Croquembouche.webp" alt="Vista Previa" width="255">
                     <a href="https://www.bonviveur.es/recetas/croquembouche"><button class="btn btn-dark">Ver Receta</button></a>
                 </div>
                 <br>
-                <div class="cuadroContenido">
+                <div class="cuadroContenido row m-1">
                     <div class="tPrinTitle">Proximamente</div>
                     <img src="../imagenes/comunidad/17659499.gif" alt="Vista Previa" width="255">
                 </div>
@@ -132,6 +151,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../JS/index_user.js"></script>
 </body>
 
 </html>

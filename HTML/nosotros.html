@@ -26,7 +26,7 @@
                     </h1>
                 </div>
                 <!-- Intento de alinear -->
-                <div class="divNav m-2 p-lg-2 p-md-1 col-10">
+                <div class="divNav m-2 p-lg-2 p-md-1 col-6">
                     <nav class="navbar navbar-expand-lg pt-1">
                         <div class="container-fluid">
                             <a class="navbar-brand tSec" href="index.html">Inicio</a>
@@ -53,6 +53,23 @@
                         </div>
                     </nav>
                 </div>
+                <div class="container btnBanner">
+                    <div id="loginContainer">
+                        <a href="acceso.html"><button class="btn btn-dark">Login</button></a>
+                    </div>
+
+                    <div id="userContainer" class="dropdown d-none">
+                        <button class="btn btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perfilUsuario.html">Perfil</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="logoutBtn">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -78,6 +95,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-</body>
+    <script src="../JS/index_user.js"></script>
 
 </html>
