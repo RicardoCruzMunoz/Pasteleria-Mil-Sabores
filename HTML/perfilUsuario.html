@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/perfilUsuario.css">
     <link rel="icon" href="../imagenes/icon.png" type="image/png">
     <!-- Fuentes -->
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
@@ -55,7 +56,37 @@
     </header>
 
     <main>
-
+        <div class="cajaPerfil container mt-3 p-4">
+            <div class="caja p-5">
+                <h1 class="tPrin mb-4">Perfil </h1>
+                <div class="container perfil px-5 py-3">
+                    <div id="detallePerfil" class="row justify-content-center p-2 mb-3">
+                        <form id="perfilForm">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password2" class="form-label">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="password2" required>
+                            </div>
+                            <div class="mb-3">
+                                <div id="perfilAlert" class="alert d-none"></div>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
     <footer class="p-3 ps-lg-5 ps-md-2">
@@ -72,6 +103,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script src="../JS/perfil.js"></script>
 </body>
 
 </html>
